@@ -1,0 +1,237 @@
+*{
+    margin: 0;
+    padding: 0;
+     box-sizing: border-box;
+
+}
+/* background  */
+body {
+    background-image: url('img/main.jpg');
+    background-size: cover;
+    width: 100%;
+    background-attachment: fixed;
+    position: relative;
+    margin: 0;
+    height: 100vh; /* Make sure body takes the full height of the viewport */
+  }
+  /*  drk background */
+  body::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    z-index: -1; /* Ensures the overlay is behind the content */
+  }
+
+/* nav  */
+  .navbar{
+    display: flex;
+    align-items: center;
+     position: sticky;
+     top: 0;
+    
+padding-top: 30px;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .navbar .lis 
+  {
+   
+    display: flex;
+    align-items: center;
+    list-style: none;
+
+  }
+  .navbar .lis li{
+     margin: 10px;
+
+  }
+  .navbar .lis li a{
+   
+    color: #fff;
+    font-family: 'Poppins', sans-serif;
+    /* color: #db1761; */
+    
+    text-decoration: none;
+    font-size: 16px; /* You can adjust this size too */
+    font-weight: 600; /* Ensures the links are bold */
+    padding: 10px;
+  }
+/* 1 */
+  #active {
+    color: #db1761;
+  }
+  /* hover  nav */
+  .navbar .lis a:hover{
+color: #ccc;
+transition: all  1s ease;
+font-weight: bold;
+  }
+  .btn{
+    padding:10px 20px;
+    color: #fff;
+    border-radius: 5px;
+    background-color: #db1761;
+  }
+  .content{
+ width: 100%;
+ margin-top: 14%;
+  }
+  .content .text1{
+    text-align: center;
+    color: #ccc;
+    font-family: 'Bebas Neue', sans-serif;
+  font-size: 36px; /* Adjust the size as per your design */
+  font-weight: bold; /* Bold */
+  letter-spacing: 2px; /* This gives a stretched effect */
+  line-height: 1.4; /* Adjust line height for readability */
+   margin-top: 10px;
+
+ }
+  .content h1{
+
+     text-align: center;
+     font-family: 'Dancing Script', cursive;
+     font-size: 60px; /* Adjust size as needed */
+     font-weight: 400; /* Regular weight (not too bold) */
+     font-style: italic; /* Italic but not too stretched */
+     margin-top: 10px;
+     color: #ccc;
+  }
+  .content .btns{
+    display: flex;
+    align-items: center;
+justify-content: center;
+  }
+
+  .btns .btn{
+      border: none;
+      margin-top: 10px;
+      padding: 20px 30px;
+      font-size: 20px;
+    outline: none;
+  }
+  .btns .btn:hover{
+    border-color:red;
+    transition: all 1s ease;
+  }
+  
+/* mbile  navbar */
+header{
+    display: flex;
+    align-items: center;
+    padding: 10px 10px;
+    justify-content: space-between;
+}
+ header img{
+    width: 100px;
+    cursor: pointer;
+    padding: 10px;
+    margin-left: 10px;
+ }
+ header i{
+    font-size: 29px;
+ 
+    padding-right: 20px;
+ }
+ header{
+    display: none;
+ }
+ /* media  qurey  */
+ @media screen and (max-width:540px) {
+          .navbar{
+            display: none;
+          }
+           header{
+            display: flex;
+           }
+           .content{
+            padding: 20px;
+            padding-top: 14%;
+           }
+           .content .btn{
+            margin-top: 20px;
+               font-size: 1rem;
+               padding: 20px 20px;
+               border-radius: 20px;
+           }
+ }
+ /* abut us */
+section{
+    width: 100%;
+    margin-top: 20%;
+    flex-wrap: wrap;
+    height: 100vh;
+     
+}
+.all{
+    display: flex;
+    align-items: center;
+      justify-content: space-between;
+      background-color:#424949 ;
+}
+.img img{
+    width:700px;
+    height: auto;
+}
+
+
+.section-con2 h2{
+    color: #fff;
+   padding-left: 50px;
+    margin-bottom: 1rem;
+    font-family: 'Lobster', cursive;
+    font-size: 48px; /* Large size */
+    font-weight: normal; /* Not bold */
+    letter-spacing: 2px; /* Stretched effect */
+  
+}
+#text{
+    color: #fff;
+    line-height: 25px;
+    /* padding: 50px 50px; */
+    margin: 100px 100px ;
+}
+
+.section-con2{
+    /* margin: 100px 100px; */
+}
+@media screen and (max-width:540px) {
+    .img img {
+        display: none;
+    }
+
+    
+}
+
+@media screen and (max-width: 540px) {
+    .content {
+        margin: 0;
+        padding: 0;  /* حذف پدینگ اضافی */
+    }
+    .content .text1, .content h2 {
+        margin: 0;  
+        margin-top: 20px;
+        padding: 0;
+    }
+    #text{
+      padding: 0;
+       margin: 0;    
+    }
+   
+     .dv h2 {
+ padding: 10px;
+ margin: 10px;
+ font-size: 30px;
+
+     }
+        #text{
+            padding: 10px;
+            margin: 10px;
+            
+            text-align: left;
+        }
+}
